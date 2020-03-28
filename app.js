@@ -76,7 +76,7 @@ myApp.controller('home-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/stats/global'
+        url: 'https://anuda.me:8443/coronaback/data/stats/global'
     }).then(function successCallback(response) {
 
         $scope.globalStats=response.data;
@@ -89,7 +89,7 @@ myApp.controller('home-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/stats/sl'
+        url: 'https://anuda.me:8443/coronaback/data/stats/sl'
     }).then(function successCallback(response) {
 
         $scope.slStats=response.data;
@@ -103,7 +103,7 @@ myApp.controller('home-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/news/global/min'
+        url: 'https://anuda.me:8443/coronaback/news/global/min'
     }).then(function successCallback(response) {
 
         $scope.globalNews=response.data;
@@ -116,7 +116,7 @@ myApp.controller('home-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/news/local/min'
+        url: 'https://anuda.me:8443/coronaback/news/local/min'
     }).then(function successCallback(response) {
 
         $scope.localNews=response.data;
@@ -130,7 +130,7 @@ myApp.controller('home-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/graphs?type=dates'
+        url: 'https://anuda.me:8443/coronaback/data/graphs?type=dates'
     }).then(function successCallback(response) {
 
         dates=response.data;
@@ -144,7 +144,7 @@ myApp.controller('home-controller', function ($scope, $http) {
     });
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/graphs?type=ln'
+        url: 'https://anuda.me:8443/coronaback/data/graphs?type=ln'
     }).then(function successCallback(response) {
 
         ln=response.data;
@@ -160,7 +160,7 @@ myApp.controller('home-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/graphs?type=gc'
+        url: 'https://anuda.me:8443/coronaback/data/graphs?type=gc'
     }).then(function successCallback(response) {
 
         gc=response.data;
@@ -175,7 +175,7 @@ myApp.controller('home-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/graphs?type=gn'
+        url: 'https://anuda.me:8443/coronaback/data/graphs?type=gn'
     }).then(function successCallback(response) {
 
         gn=response.data;
@@ -190,7 +190,7 @@ myApp.controller('home-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/graphs?type=lc'
+        url: 'https://anuda.me:8443/coronaback/data/graphs?type=lc'
     }).then(function successCallback(response) {
 
         lc=response.data;
@@ -311,7 +311,7 @@ myApp.controller('news-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/news/global'
+        url: 'https://anuda.me:8443/coronaback/news/global'
     }).then(function successCallback(response) {
 
         $scope.globalNews=response.data;
@@ -324,7 +324,7 @@ myApp.controller('news-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/news/local'
+        url: 'https://anuda.me:8443/coronaback/news/local'
     }).then(function successCallback(response) {
 
         $scope.localNews=response.data;
@@ -415,7 +415,7 @@ myApp.controller('data-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/stats/global'
+        url: 'https://anuda.me:8443/coronaback/data/stats/global'
     }).then(function successCallback(response) {
 
         $scope.globalStats=response.data;
@@ -430,7 +430,7 @@ myApp.controller('data-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/stats/sl'
+        url: 'https://anuda.me:8443/coronaback/data/stats/sl'
     }).then(function successCallback(response) {
 
         $scope.slStats=response.data;
@@ -448,7 +448,7 @@ myApp.controller('data-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/graphs?type=dates'
+        url: 'https://anuda.me:8443/coronaback/data/graphs?type=dates'
     }).then(function successCallback(response) {
 
         dates=response.data;
@@ -462,7 +462,7 @@ myApp.controller('data-controller', function ($scope, $http) {
     });
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/graphs?type=ln'
+        url: 'https://anuda.me:8443/coronaback/data/graphs?type=ln'
     }).then(function successCallback(response) {
 
         ln=response.data;
@@ -478,7 +478,7 @@ myApp.controller('data-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/graphs?type=gc'
+        url: 'https://anuda.me:8443/coronaback/data/graphs?type=gc'
     }).then(function successCallback(response) {
 
         gc=response.data;
@@ -493,7 +493,7 @@ myApp.controller('data-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/graphs?type=gn'
+        url: 'https://anuda.me:8443/coronaback/data/graphs?type=gn'
     }).then(function successCallback(response) {
 
         gn=response.data;
@@ -508,7 +508,7 @@ myApp.controller('data-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/graphs?type=lc'
+        url: 'https://anuda.me:8443/coronaback/data/graphs?type=lc'
     }).then(function successCallback(response) {
 
         lc=response.data;
@@ -527,7 +527,7 @@ myApp.controller('data-controller', function ($scope, $http) {
 
     $http({
         method: 'GET',
-        url: 'http://localhost:8080/data/stats?country=usa'
+        url: 'https://anuda.me:8443/coronaback/data/stats?country=usa'
     }).then(function successCallback(response) {
 
         $scope.countryData = response.data;
@@ -546,7 +546,7 @@ myApp.controller('data-controller', function ($scope, $http) {
         console.log($scope.country);
         $http({
             method: 'GET',
-            url: 'http://localhost:8080/data/stats?country='+$scope.country
+            url: 'https://anuda.me:8443/coronaback/data/stats?country='+$scope.country
         }).then(function successCallback(response) {
 
             $scope.countryData = response.data;
