@@ -531,8 +531,151 @@ myApp.controller('data-controller', function ($scope, $http) {
     }).then(function successCallback(response) {
 
         $scope.countryData = response.data;
+        $scope.usa = response.data;
 
 
+
+    }, function errorCallback(response) {
+        // The next bit of code is asynchronously tricky.
+        alert("Error Retrieving Data");
+
+    });
+
+    $http({
+        method: 'GET',
+        url: 'https://anuda.me:8443/coronaback/data/stats?country=italy'
+    }).then(function successCallback(response) {
+
+        $scope.italy = response.data;
+
+
+
+    }, function errorCallback(response) {
+        // The next bit of code is asynchronously tricky.
+        alert("Error Retrieving Data");
+
+    });
+
+    $http({
+        method: 'GET',
+        url: 'https://anuda.me:8443/coronaback/data/stats?country=china'
+    }).then(function successCallback(response) {
+
+        $scope.china = response.data;
+
+
+
+    }, function errorCallback(response) {
+        // The next bit of code is asynchronously tricky.
+        alert("Error Retrieving Data");
+
+    });
+
+    $http({
+        method: 'GET',
+        url: 'https://anuda.me:8443/coronaback/data/stats?country=spain'
+    }).then(function successCallback(response) {
+
+        $scope.spain = response.data;
+
+
+
+    }, function errorCallback(response) {
+        // The next bit of code is asynchronously tricky.
+        alert("Error Retrieving Data");
+
+    });
+
+    $http({
+        method: 'GET',
+        url: 'https://anuda.me:8443/coronaback/data/stats?country=germany'
+    }).then(function successCallback(response) {
+
+        $scope.germany = response.data;
+
+
+
+    }, function errorCallback(response) {
+        // The next bit of code is asynchronously tricky.
+        alert("Error Retrieving Data");
+
+    });
+
+    $http({
+        method: 'GET',
+        url: 'https://anuda.me:8443/coronaback/data/stats?country=france'
+    }).then(function successCallback(response) {
+
+        $scope.france = response.data;
+
+
+
+    }, function errorCallback(response) {
+        // The next bit of code is asynchronously tricky.
+        alert("Error Retrieving Data");
+
+    });
+
+    $http({
+        method: 'GET',
+        url: 'https://anuda.me:8443/coronaback/data/stats?country=iran'
+    }).then(function successCallback(response) {
+
+        $scope.iran = response.data;
+
+
+
+    }, function errorCallback(response) {
+        // The next bit of code is asynchronously tricky.
+        alert("Error Retrieving Data");
+
+    });
+
+    $http({
+        method: 'GET',
+        url: 'https://anuda.me:8443/coronaback/data/stats?country=uk'
+    }).then(function successCallback(response) {
+
+        $scope.uk = response.data;
+
+
+
+    }, function errorCallback(response) {
+        // The next bit of code is asynchronously tricky.
+        alert("Error Retrieving Data");
+
+    });
+
+    $http({
+        method: 'GET',
+        url: 'https://anuda.me:8443/coronaback/data/stats?country=switzerland'
+    }).then(function successCallback(response) {
+
+        $scope.switzerland = response.data;
+
+
+
+    }, function errorCallback(response) {
+        // The next bit of code is asynchronously tricky.
+        alert("Error Retrieving Data");
+
+    });
+
+    $http({
+        method: 'GET',
+        url: 'https://anuda.me:8443/coronaback/data/stats?country=s.%20korea'
+    }).then(function successCallback(response) {
+
+        $scope.korea = response.data;
+
+        var conf2Data = [$scope.usa.cases, $scope.italy.cases, $scope.china.cases, $scope.spain.cases, $scope.germany.cases, $scope.france.cases, $scope.iran.cases, $scope.uk.cases, $scope.switzerland.cases, $scope.korea.cases];
+
+        var delayInMilliseconds = 1000; //1 second
+
+        setTimeout(function() {
+            initChart($chart2, conf2Data);
+
+        }, delayInMilliseconds);
 
 
     }, function errorCallback(response) {
@@ -624,6 +767,32 @@ myApp.controller('data-controller', function ($scope, $http) {
         salesChart.update();
 
     };
+
+    var $chart2 = $('#chart-bars2');
+
+
+    //
+    // Methods
+    //
+
+    // Init chart
+    function initChart($chart2, chart2Data) {
+
+        // Create chart
+        var ordersChart = new Chart($chart2, {
+            type: 'bar',
+            data: {
+                labels: ['USA', 'Italy', 'China', 'Spain', 'Germany', 'France', 'Iran', 'UK', 'Switzerland', 'South Korea'],
+                datasets: [{
+                    label: 'Sales',
+                    data: chart2Data
+                }]
+            }
+        });
+
+        // Save to jQuery object
+        $chart2.data('chart', ordersChart);
+    }
 
 
     // Events
