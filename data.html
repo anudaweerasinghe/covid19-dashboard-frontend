@@ -20,8 +20,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-    <meta name="author" content="Creative Tim">
+    <meta name="description" content="Informational Dashboard with data, news and more useful resources related to the COVID-19 Pandemic">
+    <meta name="author" content="Anuda Weerasinghe">
     <title>COVID-19 Informational Dashboard</title>
     <!-- Favicon -->
     <link rel="icon" href="assets/imgs/covid.png" type="image/png">
@@ -276,7 +276,7 @@
     <!-- Page content -->
     <div class="container-fluid mt--6">
         <div class="row">
-            <div class="col-xl-12">
+            <div class="col-xl-8">
                 <div class="card bg-default">
                     <div class="card-header bg-transparent">
                         <div class="row align-items-center">
@@ -334,9 +334,27 @@
                     </div>
                 </div>
             </div>
+            <div class="col-xl-4">
+                <div class="card">
+                    <div class="card-header bg-transparent">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h6 class="text-uppercase text-muted ls-1 mb-1">COVID-19</h6>
+                                <h5 class="h3 mb-0">Cases by Country</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!-- Chart -->
+                        <div class="chart">
+                            <canvas id="chart-bars2" class="chart-canvas"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="row">
-            <div class="col-xl-4">
+            <div class="col-xl-12">
                 <div class="card">
                     <div class="card-header border-0">
                         <div class="row align-items-center">
@@ -472,24 +490,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-8">
-                <div class="card">
-                    <div class="card-header bg-transparent">
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <h6 class="text-uppercase text-muted ls-1 mb-1">COVID-19</h6>
-                                <h5 class="h3 mb-0">Cases by Country</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <!-- Chart -->
-                        <div class="chart">
-                            <canvas id="chart-bars2" class="chart-canvas"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
 
 
