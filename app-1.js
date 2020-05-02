@@ -355,7 +355,7 @@ myApp.controller('news-controller', function ($scope, $http) {
 
 });
 
-myApp.controller('data-controller', function ($scope, $http) {
+myApp.controller('data-controller', function ($scope, $http, $sce) {
 
     $scope.sl = true;
     $scope.global = false;
@@ -368,6 +368,9 @@ myApp.controller('data-controller', function ($scope, $http) {
     $scope.cardFiveB = "Tests";
 
     $scope.iconFive = "fa-syringe";
+
+    $scope.frameSource = $sce.trustAsResourceUrl("https://felipec.github.io/covid-19/trajectory.html");
+
 
     var dates =[];
     var ln = [];
@@ -736,8 +739,7 @@ myApp.controller('data-controller', function ($scope, $http) {
         }).then(function successCallback(response) {
 
             $scope.countryData = response.data;
-
-
+            $scope.frameSource = $sce.trustAsResourceUrl("https://felipec.github.io/covid-19/trajectory.html?country="+$scope.countryData.country);
 
 
         }, function errorCallback(response) {

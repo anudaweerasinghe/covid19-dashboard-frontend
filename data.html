@@ -18,6 +18,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src = "app-1.js"></script>
 <head>
+    <style type="text/css" media="screen">
+
+
+
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Informational Dashboard with data, news and more useful resources related to the COVID-19 Pandemic">
@@ -355,7 +360,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xl-12">
+            <div class="col-xl-4">
                 <div class="card">
                     <div class="card-header border-0">
                         <div class="row align-items-center">
@@ -491,9 +496,11 @@
                     </div>
                 </div>
             </div>
-
+            <div class="col-xl-8">
+                <div class="card" style="height: 100%">
+                    <iframe id="testimonials" name="testimonials" ng-src={{frameSource}} allowtransparency="true"  scrolling="no" style="width:100%;border:none;height: 800px;   border: 1em solid white;"></iframe>                </div>
+            </div>
         </div>
-
 
 
 
