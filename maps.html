@@ -74,17 +74,18 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="news.html">
+                        <a class="nav-link" href="news.html">
                             <i class="ni ni-books text-info"></i>
                             <span class="nav-link-text">News</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="maps.html">
+                        <a class="nav-link active" href="maps.html">
                             <i class="ni ni-world text-purple"></i>
                             <span class="nav-link-text">Maps</span>
                         </a>
                     </li>
+
                 </ul>
 
             </div>
@@ -128,8 +129,8 @@
                         <h6 class="h2 text-white d-inline-block mb-0">COVID-19 Informational Dashboard</h6>
                         <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                             <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                                <li class="breadcrumb-item"><a href=""><i class="ni ni-books"></i></a></li>
-                                <li class="breadcrumb-item"><a href="">News</a></li>
+                                <li class="breadcrumb-item"><a href=""><i class="ni ni-world"></i></a></li>
+                                <li class="breadcrumb-item"><a href="">Maps</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -162,71 +163,20 @@
             <!--          </div>-->
             <!--        </div>-->
         <div class="row">
+            <div class="col-xl-12">
+                <div class="card" style="padding: 2px">
+                    <div class="flourish-embed flourish-map" data-src="story/225979"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-xl-8">
-                <div class="card">
-                    <div class="card-header border-0">
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <h2 class="mb-0">COVID-19 in the Local News {{cardLabel}}</h2>
-                            </div>
-                            <div class="col text-right" ng-if="sl">
-                                <a class="btn btn-sm btn-primary">Sri Lanka</a>
-                                <a href="" class="btn btn-sm btn-neutral" ng-click="changeToGlobal()">Global</a>
-
-                            </div>
-
-                            <div class="col text-right" ng-if="global">
-                                <a href="" class="btn btn-sm btn-neutral" ng-click="changeToSl()">Sri Lanka</a>
-                                <a  class="btn btn-sm btn-primary">Global</a>
-
-                            </div>
-
-                        </div>
-                    </div>
-                        <div class="card">
-
-                            <div class="card-header border-0">
-                                <div ng-repeat="items in news">
-                                    <a href="{{items.url}}" target="_blank">
-
-                                        <div class="row align-items-center">
-
-
-                                            <div class="col-xl-8">
-                                                <div class="row">
-                                                    <div class="col-xl-8">
-                                                        <h2 class="mb-0">{{items.title}}</h2>
-                                                    </div>
-                                                    <div class="col-xl-4">
-                                                        <p class="text-black-50">by {{items.author}}</p>
-                                                    </div>
-                                                </div>
-                                                <p class="text-black-50">{{items.description}}</p>
-                                            </div>
-                                            <div class="col-xl-4">
-                                                <img src={{items.urlToImage}}
-                                                     style="width: 100%;">
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <hr>
-                                </div>
-                            </div>
-
-                        </div>
-                </div>
+                <div class="card" style="padding: 2px">
+                    <iframe id="testimonial" name="testimonials" ng-src="https://www.covid19globalinfo.com/" allowtransparency="true"  scrolling="no" style="width:100%;border:none;height: 680px;   border: 1em solid white;"></iframe>                </div>
             </div>
-            <div class="col-xl-4" ng-hide="global">
-                <div class="card">
-
-                    <a class="twitter-timeline" href="https://twitter.com/HPBSriLanka"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-            </div>
-            <div class="col-xl-4" ng-hide="sl">
-                <div class="card">
-
-                    <a class="twitter-timeline" href="https://twitter.com/WHO"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
+            <div class="col-xl-4">
+                <div class="card" style="padding: 2px">
+                    <iframe id="testimonials" name="testimonials" ng-src="https://www.google.com/maps/d/embed?mid=1yCWRuSZIRpd-dHoa3e3fsmBbCc7JMPUN" allowtransparency="true"  scrolling="no" style="width:100%;border:none;height: 680px;   border: 1em solid white;"></iframe>                </div>
             </div>
         </div>
         <!-- Footer -->

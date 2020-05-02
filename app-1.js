@@ -739,8 +739,19 @@ myApp.controller('data-controller', function ($scope, $http, $sce) {
         }).then(function successCallback(response) {
 
             $scope.countryData = response.data;
-            $scope.frameSource = $sce.trustAsResourceUrl("https://felipec.github.io/covid-19/trajectory.html?country="+$scope.countryData.country);
 
+            if($scope.countryData.country === 'USA'){
+                $scope.frameSource = $sce.trustAsResourceUrl("https://felipec.github.io/covid-19/trajectory.html?country=US");
+            }else if($scope.countryData.country === "UK"){
+                $scope.frameSource = $sce.trustAsResourceUrl("https://felipec.github.io/covid-19/trajectory.html?country=United%20Kingdom");
+            }else if($scope.countryData.country === 'S. Korea'){
+                $scope.frameSource = $sce.trustAsResourceUrl("https://felipec.github.io/covid-19/trajectory.html?country=Korea,%20South");
+            }else if($scope.countryData.country === 'UAE'){
+                $scope.frameSource = $sce.trustAsResourceUrl("https://felipec.github.io/covid-19/trajectory.html?country=United%20Arab%20Emirates");
+            }else{
+                $scope.frameSource = $sce.trustAsResourceUrl("https://felipec.github.io/covid-19/trajectory.html?country="+$scope.countryData.country);
+
+            }
 
         }, function errorCallback(response) {
             // The next bit of code is asynchronously tricky.
