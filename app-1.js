@@ -1,6 +1,8 @@
 var myApp = angular.module('myApp', []);
 
 var baseUrl = "https://anuda.me:8443/coronaback";
+// var baseUrl = "http://localhost:8080";
+
 
 myApp.controller('home-controller', function ($scope, $http) {
 
