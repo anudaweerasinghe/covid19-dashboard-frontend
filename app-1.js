@@ -4,11 +4,13 @@ var baseUrl = "https://anuda.me:8443/coronaback";
 // var baseUrl = "http://localhost:8080";
 
 
-myApp.controller('home-controller', function ($scope, $http) {
+myApp.controller('home-controller', function ($scope, $http, $sce) {
 
     $scope.sl = true;
     $scope.global = false;
     $scope.cardLabel = "In Sri Lanka";
+    $scope.frameSource = $sce.trustAsResourceUrl("https://anuda.me/covid-19-master/trajectory.html");
+
 
     $scope.confirmed = true;
     $scope.new = false;
@@ -370,7 +372,7 @@ myApp.controller('data-controller', function ($scope, $http, $sce) {
 
     $scope.iconFive = "fa-syringe";
 
-    $scope.frameSource = $sce.trustAsResourceUrl("https://felipec.github.io/covid-19/trajectory.html");
+    $scope.frameSource = $sce.trustAsResourceUrl("https://anuda.me/covid-19-master/trajectory.html");
 
 
     var dates =[];
@@ -742,15 +744,15 @@ myApp.controller('data-controller', function ($scope, $http, $sce) {
             $scope.countryData = response.data;
 
             if($scope.countryData.country === 'USA'){
-                $scope.frameSource = $sce.trustAsResourceUrl("https://felipec.github.io/covid-19/trajectory.html?country=US");
+                $scope.frameSource = $sce.trustAsResourceUrl("https://anuda.me/covid-19-master/trajectory.html?country=US");
             }else if($scope.countryData.country === "UK"){
-                $scope.frameSource = $sce.trustAsResourceUrl("https://felipec.github.io/covid-19/trajectory.html?country=United%20Kingdom");
+                $scope.frameSource = $sce.trustAsResourceUrl("https://anuda.me/covid-19-master/trajectory.html?country=United%20Kingdom");
             }else if($scope.countryData.country === 'S. Korea'){
-                $scope.frameSource = $sce.trustAsResourceUrl("https://felipec.github.io/covid-19/trajectory.html?country=Korea,%20South");
+                $scope.frameSource = $sce.trustAsResourceUrl("https://anuda.me/covid-19-master/trajectory.html?country=Korea,%20South");
             }else if($scope.countryData.country === 'UAE'){
-                $scope.frameSource = $sce.trustAsResourceUrl("https://felipec.github.io/covid-19/trajectory.html?country=United%20Arab%20Emirates");
+                $scope.frameSource = $sce.trustAsResourceUrl("https://anuda.me/covid-19-master/trajectory.html?country=United%20Arab%20Emirates");
             }else{
-                $scope.frameSource = $sce.trustAsResourceUrl("https://felipec.github.io/covid-19/trajectory.html?country="+$scope.countryData.country);
+                $scope.frameSource = $sce.trustAsResourceUrl("https://anuda.me/covid-19-master/trajectory.html?country="+$scope.countryData.country);
 
             }
 
